@@ -14,7 +14,7 @@ dotenv.config()
 dbConnected()
 
 app.use('/api',routes)
-
+app.get('/',(req,res)=> res.send("hello World"))
 
 const port = ENV.PORT || 3000; // Environment variable ka use
 app.listen(port, () => console.log(`Server is running on port ${port}`));
